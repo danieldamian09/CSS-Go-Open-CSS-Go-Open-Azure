@@ -2,10 +2,10 @@
 /* version 1 */
 
 
-/* tamaño del logo listo */
-header>div>img {
+/* tamaño del logo listo aplicando una regla directo */
+/* header>div>img {
     width: 40%;
-}
+} */
 
 /* modifica el orden de Iniciar sesion y registrate aca */
 
