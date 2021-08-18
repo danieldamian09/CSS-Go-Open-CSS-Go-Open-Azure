@@ -1,0 +1,571 @@
+﻿:root {
+  --main-gradient-color: #ffffff;
+  --second-gradient-color: #ffffff;
+  --main-color: #fa5a25;
+  --second-color: red;
+  --text-color-white: #c5c5c5;
+  --text-color-gray: #999ea3;
+  --text-color-main: var(--main-color);
+  --text-color-second: var(--second-color);
+  --text-color-error: red;
+  --font-family: 'Rubik', sans-serif;
+  --font-size-xs: .75rem;
+  --font-size-sm: .875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: .875rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-hairline: 100;
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-bold: 700;
+  --font-black: 900;
+}
+
+[class^="text"] {
+  margin-bottom: 1rem;
+}
+
+.text-xs {
+  font-size: var(--font-size-xs);
+}
+
+.text-sm,
+.buttons #cancel,
+.buttons #cancelCustom {
+  font-size: var(--font-size-sm);
+  border-radius: 10px !important;
+}
+
+.text-base {
+  font-size: var(--font-size-base);
+}
+
+.text-lg {
+  font-size: var(--font-size-lg);
+}
+
+.text-xl,
+h2 {
+  font-size: var(--font-size-xl);
+}
+
+.text-2xl {
+  font-size: var(--font-size-2xl);
+}
+
+.text-3xl {
+  font-size: var(--font-size-3xl);
+}
+
+.text-color--white,
+div#email_intro,
+h2 {
+  color: var(--text-color-white);
+}
+
+.text-color--gray {
+  color: var(--text-color-gray);
+}
+
+.text-uppercase,
+div#email_intro,
+h2 {
+  text-transform: uppercase;
+}
+
+.weight-hairline {
+  font-weight: var(--font-hairline);
+}
+
+.weight-light {
+  font-weight: var(--font-light);
+}
+
+.weight-normal {
+  font-weight: var(--font-normal);
+}
+
+.weight-medium {
+  font-weight: var(--font-medium);
+}
+
+.weight-bold,
+div#email_intro,
+h2 {
+  font-weight: var(--font-bold);
+}
+
+.weight-black {
+  font-weight: var(--font-black);
+}
+
+.text-color--main {
+  color: var(--text-color-main);
+}
+
+.text-color--second {
+  color: var(--text-color-second);
+}
+
+.custom--gradient-bg,
+body {
+  background: linear-gradient(0deg, var(--main-gradient-color) 0%, var(--second-gradient-color) 100%);
+}
+
+.custom--main-color {
+  color: #ffffff;
+  font-weight: 200;
+  border-radius: 10px !important;
+  background: linear-gradient(32.85deg, #FA2525 30.92%, #FA7E25 86.1%) !important;
+}
+
+
+
+button {
+  border: 0;
+  border-radius: 1.5rem;
+  padding: 1rem 0;
+  cursor: pointer;
+  width: 230px;
+  text-transform: uppercase;
+  font-weight: 600;
+  outline: none;
+}
+
+button:hover,
+button:focus {
+  background: linear-gradient(32.85deg, #FA2525 30.92%, #FA7E25 86.1%) !important;
+}
+
+button:active {
+  transform: scale(0.99);
+}
+
+
+
+/* cambiar estilos del boton REGISTRATE AQUI HR */
+button.custom--main-color.text-color--white.weight-bold {
+  background: none !important;
+  color: #FA2525;
+  font-size: 16px !important;
+  font-weight: bold;
+  padding: 0;
+}
+
+/* cambiar estilos del boton REGISTRATE AQUI HR */
+
+
+
+body {
+  height: 100vh;
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-attachment: fixed;
+}
+
+.custom--second-color {
+  background-color: var(--second-color);
+}
+
+header {
+  grid-area: header;
+  align-self: center;
+  justify-self: center;
+}
+
+section {
+  grid-area: main;
+  align-self: stretch;
+}
+
+footer {
+  grid-area: footer;
+  align-self: center;
+  justify-self: center;
+}
+
+#api {
+  width: 100%;
+  max-width: 470px;
+}
+
+#forgotPassword {
+  position: absolute;
+  bottom: 0;
+  color: #5E5E5E;
+  text-decoration: none;
+  bottom: 66px;
+  margin-left: -74px;
+  z-index: 99999;
+}
+
+#attributeVerification #attributeList ul li .attrEntry.validate #email_fail_retry {
+  float: none;
+}
+
+#attributeVerification #attributeList ul li #email_success.verificationSuccessText {
+  float: none;
+}
+
+.container {
+  display: grid;
+  align-content: space-between;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-auto-flow: dense;
+  grid-template-areas: "header""main""footer";
+}
+
+.grid {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));  */
+  /* modifica el orden de Iniciar sesion y registrate aca HR*/
+  grid-template-rows: repeat(auto-fit, minmax(110px, 1fr));
+  /* modifica el orden de Iniciar sesion y registrate aca HR*/
+}
+
+@media (max-width: 640px) {
+  .grid {
+    margin: 0 20px;
+  }
+
+  .grid__left {
+    order: 2;
+  }
+
+  .grid__right {
+    order: 1;
+  }
+
+  .custom-box {
+    border-top: 0px solid #fff !important;
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+    color: #5e5e5e;
+    text-decoration: none !important;
+  }
+
+  #forgotPassword {
+    bottom: 50px;
+  }
+}
+
+
+/* media query para subir el boton de ¿Olvido Contraseña? HR*/
+@media (max-width: 514px) {
+  #forgotPassword {
+    bottom: 66px;
+  }
+}
+
+/* media query para subir el boton de ¿Olvido Contraseña? HR*/
+
+
+.grid__item {
+  text-align: center;
+  position: relative;
+}
+
+.grid .grid__left {
+  margin-bottom: 2rem;
+  /* modifica el orden de Iniciar sesion y registrate aca HR*/
+  order: 1;
+  /* modifica el orden de Iniciar sesion y registrate aca HR*/
+
+}
+
+.custom-box {
+  padding: 1rem;
+  margin: 0 auto;
+  margin-top: 3rem;
+  color: #5e5e5e;
+  text-decoration: none !important;
+}
+
+.custom-box a {
+  color: #5e5e5e;
+  text-decoration: none !important;
+  font-weight: 500;
+  text-transform: none !important;
+}
+
+
+/* agrega barra lateral Avisos de Privicidad, Terminos y Conidciones, Uso de Cookies y Ayuda */
+
+a.text-color--main.text-uppercase.text-sm::after {
+  content: '|';
+}
+
+a.text-color--main.text-uppercase.text-sm:last-child::after {
+  content: none !important;
+}
+
+/* agrega barra lateral Avisos de Privicidad, Terminos y Conidciones, Uso de Cookies y Ayuda */
+
+
+
+/* modificar la posicion del div Mantener la Sesion activa HR*/
+.rememberMe {
+  text-align: left;
+  padding-left: 31px;
+}
+
+/* modificar la posicion del div Mantener la Sesion activa HR*/
+
+
+.rememberMe label {
+  display: unset;
+  color: #5E5E5E;
+  font-weight: 400;
+}
+
+.rememberMe input {
+  width: unset !important;
+  height: unset !important;
+  border: 1px solid #C7C7C7;
+}
+
+.intro {
+  color: white;
+  padding: 0 20px !important;
+}
+
+.error p {
+  color: var(--text-color-error);
+  text-align: left;
+  margin-left: 45px;
+  margin-right: 45px;
+  margin-bottom: 5px;
+}
+
+/* Reset Select */
+select#languages {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: #dedede;
+  background-image: none;
+}
+
+/* Remove IE arrow */
+select#languages::-ms-expand {
+  display: none;
+}
+
+select#languages {
+  flex: 1;
+  padding: .5rem 1rem;
+  color: #333;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+#attributeList ul li .attrEntry.validate input:invalid,
+#attributeList ul li .attrEntry.validate input.invalid {
+  border: 3px solid #bb0000;
+}
+
+#attributeList ul li .attrEntry .verify {
+  padding: 0;
+  margin: 0;
+}
+
+#attributeVerification .buttons,
+.buttons {
+  padding: 0;
+  margin: 0;
+  border-radius: 10px !important;
+}
+
+.buttons #continue {
+  box-shadow: none;
+  background-color: var(--main-color);
+  border-radius: 10px !important;
+}
+
+.buttons #cancel {
+  height: 50px;
+  background-color: #d4d8da !important;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 1rem;
+  border-radius: 10px !important;
+}
+
+.buttons #cancelCustom {
+  height: 50px;
+  background-color: #d4d8da !important;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 1rem;
+  color: #505050;
+  border-radius: 10px !important;
+}
+
+.buttons #cancelCustom:hover {
+  color: black !important;
+}
+
+.buttons #cancel:before {
+  display: none;
+}
+
+.buttons #cancelCustom:before {
+  display: none;
+}
+
+.buttons button:not(#cancel):not(#cancelCustom) {
+  box-shadow: none;
+  /* background-color: var(--main-color) !important; */
+  border-radius: 10px !important;
+  width: 250px !important;
+  outline: none;
+}
+
+.buttons button:not(#cancel):not(#cancelCustom):hover,
+.buttons button:not(#cancel):not(#cancelCustom):focus {
+  background: linear-gradient(32.85deg, #FA2525 30.92%, #FA7E25 86.1%) !important;
+}
+
+.buttons button:not(#cancel):not(#cancelCustom):active {
+  transform: scale(0.99);
+}
+
+.buttons button {
+  display: block;
+}
+
+ul {
+  margin: 0 !important;
+}
+
+ul li {
+  margin-top: 0 !important;
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+
+ul li input {
+  border-radius: 10px !important;
+  height: 45px !important;
+  width: 98% !important;
+  box-shadow: none !important;
+}
+
+.buttons button {
+  margin: 0 auto;
+  margin-top: 1rem;
+  box-shadow: none;
+  background-color: linear-gradient(32.85deg, #FA2525 30.92%, #FA7E25 86.1%) !important;
+  border-radius: 10px !important;
+  width: 250px !important;
+  display: block;
+  color: #fff;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+#localAccountForm .intro h2 {}
+
+
+label {
+  display: none;
+}
+
+input {
+  padding: 0 1rem;
+  border-radius: 4px !important;
+  height: 45px !important;
+  width: 80% !important;
+  box-shadow: none !important;
+  margin-bottom: 1rem;
+  border: 1px solid #C7C7C7;
+}
+
+#localAccountForm button#next {
+  margin-top: 0;
+  font-weight: 200;
+  border-radius: 10px !important;
+  background: linear-gradient(32.85deg, #FA2525 30.92%, #FA7E25 86.1%) !important;
+}
+
+#selectedLanguage {
+  display: none;
+}
+
+label[for='verificationCode'] {
+  display: block;
+}
+
+input#verificationCode {
+  width: 60% !important;
+  margin: 1rem auto;
+}
+
+label[for='verificationCode']+a#retryCode {
+  text-decoration: underline;
+  margin: 1rem;
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: bisque;
+  cursor: pointer;
+}
+
+.phoneNumber {
+  padding: 10px;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  width: 60%;
+  margin: 20px auto;
+}
+
+.phoneNumber .number {
+  font-weight: bold;
+}
+
+.verificationInfoText {
+  padding: 10px 0;
+  text-decoration: none;
+}
+
+button#email_ver_but_resend:not(#cancel):not(#cancelCustom),
+button#verifyPhone:not(#cancel):not(#cancelCustom) {
+  background-color: #FB8C00 !important;
+}
+
+.buttons button#readonly_email_ver_but_send:not(#cancel):not(#cancelCustom) {
+  width: 350px !important;
+}
+
+input#readonly_email {
+  margin-top: 10px;
+  width: 98% !important;
+}
+
+div#readonly_email_info {
+  float: left;
+  text-align: left;
+}
+
+input#readonly_email {
+  background-color: rgba(239, 239, 239, 0.3) !important;
+  color: #545454 !important;
+}
