@@ -29,16 +29,16 @@
 
 /* CONSULTAR */
 /* cambiar el enlace de posicion de Olvido Contraseña solo para desktop*/
-#forgotPassword {
+/* #forgotPassword {
     position: absolute;
-    /* bottom: 0; */
+    bottom: 0;
     color: #5E5E5E;
     text-decoration: none;
     bottom: 160px;
     margin-left: -70%;
     z-index: 99999;
     right: 37%;
-}
+} */
 
 
 
